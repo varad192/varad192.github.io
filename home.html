@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Incredible India Tourism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+.container{
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://assets.gqindia.com/photos/62f9c75e0d4e31701fb885d6/master/pass/Lesser-known-facts-about-India.jpeg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    padding:20px;
+    min-height:100vh;
+}
+
+
+h1{
+    text-align:center;
+    color:#FFD700;
+    font-size:38px;
+    margin-top:20px;
+}
+
+h3{
+    text-align:center;
+    color:#90EE90;
+    margin-bottom:20px;
+}
+
+
+.search-box{
+    text-align:center;
+    margin:30px 0;
+}
+
+.search-box input{
+    padding:12px;
+    width:300px;
+    max-width:90%;
+    border-radius:25px;
+    border:none;
+    outline:none;
+}
+
+.search-box button{
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    background:#FF4500;
+    color:white;
+    cursor:pointer;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.search-box button:hover{
+    background:#ff2200;
+    transform:scale(1.05);
+}
+.navbar{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:20px 0;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#FFD700;
+    font-weight:bold;
+    padding:8px 12px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+
+.card{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(8px);
+    padding:20px;
+    border-radius:15px;
+    margin:20px auto;
+    max-width:800px;
+    animation:fadeUp 0.8s ease-in-out;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+@keyframes fadeUp{
+    from{transform:translateY(40px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+.main-image{
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+    max-width:100%;
+    height:auto;
+}
+
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    margin:20px 0;
+    border-collapse:collapse;
+    background:rgba(255,255,255,0.1);
+}
+
+th, td{
+    padding:12px;
+    border:1px solid rgba(255,255,255,0.3);
+    text-align:left;
+}
+
+th{
+    background:rgba(0,0,0,0.5);
+    color:#FFD700;
+}
+
+.section-text{
+    line-height:1.7;
+    padding:20px;
+}
+
+.highlight{
+    color:#FFD700;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    opacity:0.8;
+}
+
+
+@media(max-width:768px){
+
+h1{
+    font-size:26px;
+}
+
+.search-box input{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.search-box button{
+    width:100%;
+    margin-left:0;
+}
+
+th, td{
+    font-size:14px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">🌏 INCREDIBLE INDIA TOURISM 🌏</h1>
+<h3 class="subtitle">Explore the Beauty, Culture & Heritage of India</h3>
+
+<style>
+.title{
+    text-align:center;
+    font-size:50px;
+    margin-top:40px;
+    color:#ffffff;
+    letter-spacing:5px;
+    animation: zoomReveal 2s ease-out forwards,
+               lightFlicker 3s ease-in-out infinite 2s;
+    transform:scale(0);
+}
+@keyframes zoomReveal{
+    0%{
+        transform:scale(0) rotate(-10deg);
+        opacity:0;
+        filter:blur(20px);
+    }
+    60%{
+        transform:scale(1.1) rotate(2deg);
+        opacity:1;
+        filter:blur(0);
+    }
+    100%{
+        transform:scale(1) rotate(0);
+    }
+}
+
+@keyframes lightFlicker{
+    0%,100%{
+        text-shadow:0 0 10px #ff9933,
+                    0 0 20px #ffffff,
+                    0 0 30px #138808;
+    }
+    50%{
+        text-shadow:0 0 25px #ffd700,
+                    0 0 40px #ff4500,
+                    0 0 60px #00ffcc;
+    }
+}
+
+.subtitle{
+    text-align:center;
+    font-size:24px;
+    margin-top:20px;
+    color:#90EE90;
+    animation: floatSoft 4s ease-in-out infinite,
+               fadeIn 2s ease forwards;
+}
+
+@keyframes floatSoft{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-15px); }
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; }
+    to{ opacity:1; }
+}
+</style>
+
+<div class="search-box">
+<input type="text" id="searchBox" placeholder="Search Indian State (Example: Maharashtra)">
+<button onclick="searchState()">Search</button>
+</div>  
+
+
+<div id="result"></div>
+
+<hr>
+
+<div class="navbar">
+<a href="home (1).html">Home</a>
+<a href="about india.html">About India</a>
+<a href="desti.html">Destinations</a>
+<a href="North india tourism.html">North India</a>
+<a href="south.html">South India</a>
+<a href="east.html">East India</a>
+<a href="west.html">West India</a>
+<a href="Adventure.html">Adventure</a>
+<a href="reli.html">Religious</a>
+<a href="food and culture.html">Food & Culture</a>
+<a href="gallry.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<hr>
+
+<img src="https://www.irctctourism.com/famous-places-in-india/img/1stsection.jpg" 
+     alt="India Tourism Image" 
+     class="main-image">
+
+<body>
+
+
+
+<div class="table-container">
+<table>
+<tr>
+    <th><center>Why Visit India?</center></th>
+</tr>
+<tr>
+    <td class="section-text">
+        <center>
+        India is one of the most diverse and culturally rich countries in the world, offering unforgettable
+        experiences for every kind of traveler.From the Taj Mahal in Agra and Qutub Minar in Delhi to the royal
+        grandeur of Jaipur and the temples of Khajuraho;from the Himalayan landscapes to the beaches of Goa and 
+        the backwaters of Kerala,India offers culture, spirituality, adventure, wildlife, delicious cuisine, 
+        colorful festivals and unforgettable memories.
+        </center>
+</td>
+</tr>
+</table>
+
+<table class="attractions">
+<tr>
+    <th colspan="4"><center>Top Tourist Attractions</center></th>
+</tr>
+<tr>
+    <th><center>Place</center></th>
+    <th><center>State</center></th>
+    <th><center>Famous For</center></th>
+    <th><center>Information</center></th>
+</tr>
+<tr>
+    <td>Taj Mahal</td>
+    <td>Uttar Pradesh</td>
+    <td>Symbol of Love – White marble monument in Agra</td>
+    <td>Built by Shah Jahan in memory of Mumtaz Mahal.</td>
+</tr>
+<tr>
+    <td>Goa</td>
+    <td>Goa</td>
+    <td>Beaches & Nightlife</td>
+    <td>Popular for water sports and coastal beauty.</td>
+</tr>
+<tr>
+    <td>Jaipur</td>
+    <td>Rajasthan</td>
+    <td>Royal Palaces – Pink City</td>
+    <td>Known for forts like Amber Fort and Hawa Mahal.</td>
+</tr>
+<tr>
+    <td>Kerala Backwaters</td>
+    <td>Kerala</td>
+    <td>Houseboats & Lagoons</td>
+    <td>Famous for scenic boat rides and peaceful waters.</td>
+</tr>
+<tr>
+    <td>Hampi</td>
+    <td>Karnataka</td>
+    <td>Ancient Ruins – UNESCO Site</td>
+    <td>Historic temples and monuments of Vijayanagara Empire.</td>
+</tr>
+<tr>
+    <td>Varanasi</td>
+    <td>Uttar Pradesh</td>
+    <td>Spiritual City</td>
+    <td>Famous for Ganga Aarti and sacred ghats.</td>
+</tr>
+<tr>
+    <td>Leh-Ladakh</td>
+    <td>Ladakh</td>
+    <td>Mountain Adventures</td>
+    <td>Stunning landscapes and Buddhist monasteries.</td>
+</tr>
+<tr>
+    <td>Andaman Islands</td>
+    <td>Andaman & Nicobar</td>
+    <td>Crystal Clear Waters</td>
+    <td>Ideal for scuba diving and marine life exploration.</td>
+</tr>
+</table>
+
+
+</div>
+
+<center>
+<h3 class="highlight">✨ Plan Your Dream Trip With Us ✨</h3>
+<p style="font-size:18px;">
+Discover amazing destinations and unforgettable journeys.
+</p>
+</center>
+
+<div class="footer">
+Incredible India Tourism | Made by Student
+</div>
+
+</div>
+
+<script>
+
+var states = {
+
+"maharashtra":{
+capital:"Mumbai",
+about:"Maharashtra is famous for finance, Bollywood and historic forts.<br>Maharashtra is India's premier state for finance, Bollywood, and historic forts, with Mumbai serving as the nation's financial and entertainment capital. It boasts a rich Maratha legacy with numerous hilltop and sea forts like Shivneri and Janjira, alongside UNESCO sites like Ajanta and Ellora caves.	",
+famous:"Gateway of India<br> The Gateway of India is a 26-meter-high, iconic basalt arch located on the Mumbai waterfront at Apollo Bunder. Built in 1924 to commemorate King George V and Queen Mary’s 1911 visit, it features a unique blend of Indo-Saracenic, Hindu, and Muslim architectural styles. It is a premier, free-entry tourist landmark facing the Arabian Sea",
+info:"The Gateway of India is an iconic arch-monument on Mumbai’s Apollo Bunder waterfront, completed in 1924 to commemorate King George V and Queen Mary's 1911 visit. Designed by architect George Wittet in the Indo-Saracenic style, it is a 26-meter-high basalt structure that served as a ceremonial entrance and later symbolized the end of British rule in 1948.",
+img:"https://experiencemyindia.com/wp-content/uploads/2024/12/Gateway-of-India.jpg.webp"
+},
+
+"andhra pradesh":{
+capital:"Amaravati",
+about:"Known for temples and coastal beauty.",
+famous:"Tirupati Temple",info:"Tirupati Temple is one of the richest and most visited temples in the world.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd04lilBw0-W2DgcQC2Cx76054IcILtW2iSw&s"},
+
+"arunachal pradesh":{capital:"Itanagar",
+about:"Famous for mountains and monasteries.",
+famous:"Tawang Monastery",
+info:"Tawang Monastery is the largest monastery in India.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu4O9qSP_yyvrwMNUJeHMVDuJx9JEHAeYOmQ&s"},
+
+"assam":{capital:"Dispur",
+about:"Known for tea gardens and wildlife.",
+famous:"Kaziranga National Park",
+info:"Kaziranga is famous for one-horned rhinoceros.",
+img:"https://upload.wikimedia.org/wikipedia/commons/f/fe/Beauty_of_Kaziranga_National_Park.jpg"},
+
+"bihar":{capital:"Patna",
+about:"Land of ancient universities and Buddhism.",
+famous:"Mahabodhi Temple",
+info:"Mahabodhi Temple is a UNESCO World Heritage Site.",
+img:"https://whc.unesco.org/uploads/thumbs/site_1056_0001-400-400-20120601152647.webp"},
+
+
+"chhattisgarh":{capital:"Raipur",
+about:"Known for waterfalls and forests.",
+famous:"Chitrakote Falls",
+info:"Chitrakote is the widest waterfall in India.",
+img:"https://upload.wikimedia.org/wikipedia/commons/9/91/Chitrakot_waterfalls.JPG"},
+
+"goa":{capital:"Panaji",
+about:"Famous for beaches and nightlife.",
+famous:"Baga Beach",
+info:"Baga Beach is known for water sports and parties.",
+img:"https://static.toiimg.com/thumb/msid-59486326,width=1200,height=900/59486326.jpg"},
+
+"gujarat":{capital:"Gandhinagar",
+about:"Birthplace of Mahatma Gandhi.",
+famous:"Statue of Unity",
+info:"Statue of Unity is the tallest statue in the world.",
+img:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_193,h_200/https://www.legacyias.com/wp-content/uploads/2023/06/Statue-of-Unity-Legacy-ias.jpg"},
+
+"haryana":{capital:"Chandigarh",
+about:"Historic land of Kurukshetra.",
+famous:"Kurukshetra",
+info:"Kurukshetra is believed to be the land of Mahabharata war.",
+img:"https://static.toiimg.com/thumb/msid-50481522,width=1200,height=900/50481522.jpg"},
+
+"himachal pradesh":{capital:"Shimla",
+about:"Popular hill station state.",
+famous:"Manali",
+info:"Manali is famous for snow mountains and adventure sports.",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Manali_View.jpg/960px-Manali_View.jpg?20170601200308"},
+
+"jharkhand":{capital:"Ranchi",
+about:"Known for waterfalls and minerals.",
+famous:"Hundru Falls",
+info:"Hundru Falls is one of the highest waterfalls in Jharkhand.",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Hundru_Falls%2C_Jharkhand%2C_India_4.jpg/1280px-Hundru_Falls%2C_Jharkhand%2C_India_4.jpg"},
+
+
+"karnataka":{capital:"Bengaluru",
+about:"IT hub of India.",
+famous:"Mysore Palace",
+info:"Mysore Palace is one of the most beautiful royal palaces in India.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyADkHVmysdaYefNY8J3KecQDfgvhkdlyqg&s"},
+
+"kerala":{capital:"Thiruvananthapuram",
+about:"God's Own Country.",
+famous:"Kerala Backwaters",
+info:"Backwaters are famous for houseboat tourism.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtWkVKgKS_3pKrl-Refuq6yh8Qfvpe3DwHg&s"},
+
+"madhya pradesh":{capital:"Bhopal",
+about:"Heart of India.",
+famous:"Khajuraho Temples",
+info:"Khajuraho temples are famous for ancient sculptures.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGFRBl8QaaXF9oUNqFvQf0DM00Dz9pCEizFQ&s"},
+
+"manipur":{capital:"Imphal",
+about:"Known for Loktak Lake.",
+famous:"Loktak Lake",
+info:"Loktak Lake is the largest freshwater lake in Northeast India.",
+img:"https://upload.wikimedia.org/wikipedia/commons/e/e9/The_Loktak_Lake.jpg"},
+
+"meghalaya":{capital:"Shillong",
+about:"Abode of Clouds.",
+famous:"Living Root Bridges",
+info:"Living root bridges are naturally grown bridges.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyk9mpsscNV5ix7jxSNkzR_iS6cc0EkAJKw&s"},
+
+"mizoram":{capital:"Aizawl",
+about:"Known for hills and bamboo forests.",
+famous:"Reiek Hills",
+info:"Reiek Hills offer beautiful panoramic views.",
+img:"https://s7ap1.scene7.com/is/image/incredibleindia/reiek-mountain-reiek-mizoram-rural-hero?qlt=82&ts=1727162177885"},
+
+"nagaland":{capital:"Kohima",
+about:"Famous for tribal culture.",
+famous:"Hornbill Festival",
+info:"Hornbill Festival celebrates Naga culture.",
+img:"https://northeastexplorers.in/wp-content/uploads/2025/07/Lively-cultural-performance-at-nagaland-hornbill-festival-scaled.jpg"},
+
+"odisha":{capital:"Bhubaneswar",
+about:"Land of temples.",
+famous:"Konark Sun Temple",
+info:"Konark Sun Temple is a UNESCO heritage site.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHVS7g2fyDi48LtOVuU1vYXR9ofxxC1fRxg&s"},
+
+"punjab":{capital:"Chandigarh",
+about:"Land of five rivers.",
+famous:"Golden Temple",
+info:"Golden Temple is the holiest Sikh shrine.",
+img:"https://media.assettype.com/sentinelassam-english%2F2025-02-04%2Fcl8payd4%2FHornbill-Festival-Feature.jpg"},
+
+"rajasthan":{capital:"Jaipur",
+about:"Land of Kings.",
+famous:"Hawa Mahal",
+info:"Hawa Mahal has 953 windows.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6CjTmMRIK0yXZZKaatCguZdgfT4vb4u9ZQQ&s"},
+
+"sikkim":{capital:"Gangtok",
+about:"Small Himalayan state.",
+famous:"Gurudongmar Lake",
+info:"One of the highest lakes in the world.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaTdclnyikmARQzVBvwMNppzkGdzDhe_z9LA&s"},
+
+"tamil nadu":{capital:"Chennai",
+about:"Famous for temples and culture.",
+famous:"Meenakshi Temple",
+info:"Meenakshi Temple is a historic temple in Madurai.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsjrDvpz49vdrZo_NnGe5ELC5zIHDwiyGhg&s"},
+
+"telangana":{capital:"Hyderabad",
+about:"Known for Charminar and IT.",
+famous:"Charminar",
+info:"Charminar is a 16th-century monument.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRq2tVkWe-xkhgXwrX8OTKZOtBjOVDdCflsg&s"},
+
+"tripura":{capital:"Agartala",
+about:"Northeast cultural state.",
+famous:"Ujjayanta Palace",
+info:"Ujjayanta Palace is a royal palace museum.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ26HmFdDhwEW0SIIZqDx45fYJbhRs0Ez3_pQ&s"},
+
+"uttar pradesh":{capital:"Lucknow",
+about:"Most populous state.",
+famous:"Taj Mahal",
+info:"Taj Mahal is one of the Seven Wonders of the World.",
+	img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMq0Utl9O-TUtLMs4xn6n1q0jyqAYN0YB3w&s"},
+
+"uttarakhand":{capital:"Dehradun",
+about:"Devbhoomi of India.",
+famous:"Kedarnath Temple",
+info:"Kedarnath is one of the Char Dham pilgrimage sites.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntFhA9BBOZVJHLNHBJIG8ChgrR8zUrw6EZA&s"},
+
+"west bengal":{capital:"Kolkata",
+about:"Cultural capital of India.",
+famous:"Victoria Memorial",
+info:"Victoria Memorial is a grand marble building in Kolkata.",
+img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZeIEx5VaLJu0eHEilcRw15LKjYnrKsmI2Iw&s"}
+};
+
+
+function searchState(){
+var input = document.getElementById("searchBox").value.trim().toLowerCase();
+var result = document.getElementById("result");
+
+if(states[input]){
+result.innerHTML = `
+<div class="card">
+<h2>${input.toUpperCase()}</h2>
+<img src="${states[input].img}">
+<p><b>Capital:</b> ${states[input].capital}</p>
+<p><b>About:</b> ${states[input].about}</p>
+<p><b>Famous Place:</b> ${states[input].famous}</p>
+<p><b>About Place:</b> ${states[input].info}</p>
+</div>`;
+}else{
+result.innerHTML = "<p style='color:red;text-align:center;'>State Not Found</p>";
+}
+}
+
+document.getElementById("searchBox").addEventListener("keypress", function(e){
+if(e.key === "Enter"){
+searchState();
+}
+});
+
+</body>
+</html>
