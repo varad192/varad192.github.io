@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact & Booking - Incredible India Tourism</title>
+    <style>
+      
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #F0F8FF, #E6F7FF);
+            margin: 0;
+            padding: 0;
+        }
+
+    
+        h1, h3 {
+            margin: 10px;
+        }
+
+        h1 {
+            color: darkred;
+            font-size: 3em;
+            text-shadow: 2px 2px #FFA07A;
+        }
+
+        h3 {
+            color: darkblue;
+        }
+
+    
+        center font a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        center font a:hover {
+            background: #FF6347;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            font-size: 1.2em;
+        }
+
+        table:nth-of-type(1) th {
+            background: #ADD8E6;
+            color: #333;
+        }
+        table:nth-of-type(2) th {
+            background: #90EE90;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 95%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+            border-color: #FF6347;
+            box-shadow: 0 0 5px #FF6347;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006400;
+        }
+
+        input[type="reset"] {
+            background-color: darkred;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #8B0000;
+        }
+
+        hr {
+            border: none;
+            height: 3px;
+            background: linear-gradient(to right, #00BFFF, #1E90FF);
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            padding: 10px;
+            color: #555;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+    <h1>📞 CONTACT & BOOKING 📧</h1>
+    <h3>Plan Your Journey with Incredible India</h3>
+</center>
+
+<hr>
+
+<center>
+<font size="4">
+   <a href="home (1).html">Home</a>
+   <a href="about india.html">About India</a>
+   <a href="desti.html">Destinations</a>
+   <a href="North india tourism.html">North India</a>
+   <a href="south.html">South India</a>
+   <a href="east.html">East India</a>
+   <a href="west.html">West India</a>
+   <a href="Adventure.html">Adventure</a>
+   <a href="reli.html">Religious</a>
+   <a href="food and culture.html">Food & Culture</a>
+   <a href="gallry.html">Gallery</a>
+   <a href="contact.html">Contact</a>
+</font>
+</center>
+
+<hr>
+<center>
+<table border="1" cellpadding="10">
+<tr>
+    <th colspan="2">Contact Information</th>
+</tr>
+<tr>
+    <th>Address</th>
+    <td>Incredible India Tourism Office, Pune</td>
+</tr>
+<tr>
+    <th>Phone</th>
+    <td>+91 9XXXX XXXX0</td>
+</tr>
+<tr>
+    <th>Email</th>
+    <td>incredibleindia@gmail.com</td>
+</tr>
+</table>
+</center>
+
+<center>
+<form action="#" method="post">
+<table border="1" cellpadding="10">
+<tr>
+    <th colspan="2">Tour Booking Form</th>
+</tr>
+<tr>
+    <td>Name</td>
+    <td><input type="text" name="name" placeholder="Your Full Name" required></td>
+</tr>
+<tr>
+    <td>Email</td>
+    <td><input type="email" name="email" placeholder="Your Email" required></td>
+</tr>
+<tr>
+    <td>Mobile</td>
+    <td>
+        <input type="text" name="mobile" placeholder="10-digit Mobile Number" required
+               pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number">
+    </td>
+</tr>
+<tr>
+    <td>Destination</td>
+    <td>
+        <select name="destination" required>
+            <option value="">Select Destination</option>
+            <option>North India</option>
+            <option>South India</option>
+            <option>East India</option>
+            <option>West India</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Travel Date</td>
+    <td><input type="date" name="travel_date" required></td>
+</tr>
+<tr>
+    <td>Message</td>
+    <td><textarea name="message" rows="4" placeholder="Your Message"></textarea></td>
+</tr>
+<tr>
+    <td colspan="2" align="center">
+       <center> <input type="submit" value="Book Now"></center> 
+        <center> <input type="reset" value="Clear"></center> 
+    </td>
+</tr>
+</table>
+</form>
+</center>
+
+<center>
+<h3 style="color: darkgreen;">🌟 Thank You for Visiting Incredible India 🌟</h3>
+</center>
+
+<hr>
+
+<footer>
+    Incredible India Tourism | Made by Student
+</footer>
+
+</body>
+</html>

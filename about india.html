@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About India - Incredible India Tourism</title>
+    <style>
+
+        body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://s7ap1.scene7.com/is/image/incredibleindia/independence-day-fes-hero?qlt=82&ts=1726639288095');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    background-attachment: scroll; /* default, ensures it moves with the page */
+}
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(0,0,139,0.7); /* semi-transparent dark blue */
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1, header p {
+            margin: 0;
+        }
+
+        .bounce {
+            display: inline-block;
+            animation: bounceAnim 2s ease-in-out infinite;
+        }
+
+        p.bounce {
+            animation-delay: 0.5s; /* stagger the paragraph */
+        }
+
+        @keyframes bounceAnim {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        nav {
+            background: green;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .map {
+            text-align: center;
+            margin: 25px;
+        }
+
+        .map img {
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px gray;
+        }
+
+        .section {
+            width: 85%;
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px gray;
+            color: black;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #add8e6;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .highlight {
+            background: #98fb98;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .festival-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .festival-card {
+            width: 250px;
+            margin: 15px;
+            background: #fffaf0;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px gray;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .festival-card:hover {
+            transform: scale(1.05);
+        }
+
+        .festival-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .festival-card h3 {
+            padding: 10px;
+            color: darkblue;
+        }
+
+        footer {
+            background: darkblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                width: 95%;
+            }
+
+            .festival-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .map img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="bounce">ABOUT INDIA</h1>
+    <p class="bounce">Land of Unity in Diversity</p>
+</header>
+
+<nav>
+   <a href="home (1).html">Home</a>
+   <a href="about india.html">About India</a>
+   <a href="desti.html">Destinations</a>
+   <a href="North india tourism.html">North India</a>
+   <a href="south.html">South India</a>
+   <a href="east.html">East India</a>
+   <a href="west.html">West India</a>
+   <a href="Adventure.html">Adventure</a>
+   <a href="reli.html">Religious</a>
+   <a href="food and culture.html">Food & Culture</a>
+   <a href="gallry.html">Gallery</a>
+   <a href="contact.html">Contact</a>
+</nav>
+
+<div class="map">
+    <img src="https://previews.123rf.com/images/vectomart/vectomart1402/vectomart140200507/25730957-illustration-of-indian-map-showing-culture-of-india.jpg" alt="India Map">
+</div>
+
+<div class="section">
+    <h2>Introduction</h2>
+    <p>
+        India is one of the oldest civilizations in the world with a history of more than 5000 years.
+        It is famous for its rich culture, traditions, festivals, languages, and heritage.
+        India is a democratic country where people of different religions and cultures live together peacefully.
+    </p>
+    <p>
+        The country is known worldwide for Yoga, Ayurveda, Bollywood,
+        classical music, dance forms and historical monuments.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Quick Facts About India</h2>
+
+    <table>
+        <tr>
+            <th>Capital</th>
+            <td>New Delhi</td>
+        </tr>
+        <tr>
+            <th>National Animal</th>
+            <td>Tiger</td>
+        </tr>
+        <tr>
+            <th>National Bird</th>
+            <td>Peacock</td>
+        </tr>
+        <tr>
+            <th>National Flower</th>
+            <td>Lotus</td>
+        </tr>
+        <tr>
+            <th>Currency</th>
+            <td>Indian Rupee (₹)</td>
+        </tr>
+        <tr>
+            <th>National Language</th>
+            <td>Hindi</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Why India is a Tourist Paradise?</h2>
+
+    <div class="highlight">
+        India offers snow-covered Himalayas, golden deserts of Rajasthan,
+        peaceful beaches of Goa, backwaters of Kerala,
+        dense forests, wildlife sanctuaries, historical monuments,
+        and spiritual destinations.
+        <br><br>
+        Every state has its own unique culture, food, dress and traditions.
+    </div>
+</div>
+
+<div class="section">
+    <h2>Major Festivals of India</h2>
+
+    <div class="festival-container">
+
+        <div class="festival-card">
+            <img src="https://i.natgeofe.com/k/03a26866-3e2a-4be4-8017-fda10c708efe/diwali_candles.jpg?wp=1&w=1084.125&h=609" alt="Diwali">
+            <h3>🎆 Diwali – Festival of Lights</h3>
+        </div>
+
+        <div class="festival-card">
+            <img src="https://cdn.britannica.com/57/244757-050-CADDB530/Hindu-Holi-Festival-Mathura-Uttar-Pradesh-India.jpg" alt="Holi">
+            <h3>🎨 Holi – Festival of Colors</h3>
+        </div>
+
+        <div class="festival-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9CUm3xa4Cw6o5geRPWFCn5t4YTQC09mefzQ&s" alt="Navratri">
+            <h3>🪔 Navratri – Festival of Dance & Devotion</h3>
+        </div>
+
+        <div class="festival-card">
+            <img src="https://www.kids-world-travel-guide.com/images/eidmubarak2025-2.png" alt="Eid">
+            <h3>🌙 Eid – Festival of Peace</h3>
+        </div>
+
+        <div class="festival-card">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf" alt="Christmas">
+            <h3>🎄 Christmas – Festival of Joy</h3>
+        </div>
+
+    </div>
+</div>
+
+<div class="section" style="text-align:center;">
+    <h2>🌟 India Welcomes You With Open Heart 🌟</h2>
+    <p>Experience diversity, spirituality, history and natural beauty in one incredible country.</p>
+</div>
+
+<footer>
+    Incredible India Tourism | Made by Student ❤️
+</footer>
+
+</body>
+</html>
