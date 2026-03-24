@@ -51,14 +51,16 @@ nav a:hover{
     text-align:center;
 }
 
+/* FIX: Better responsive layout */
 .card{
     display:inline-block;
     margin:10px;
     background-color:white;
     border-radius:10px;
     overflow:hidden;
-    width:180px;
+    width:200px;
     transition:0.3s;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
 }
 
 .card:hover{
@@ -67,7 +69,7 @@ nav a:hover{
 
 .card img{
     width:100%;
-    height:120px;
+    height:140px;
     object-fit:cover;
 }
 
@@ -98,18 +100,28 @@ footer{
     text-align:center;
     padding:10px;
 }
+
+/* 🔥 Mobile Responsive */
+@media (max-width:600px){
+    .card{
+        width:90%;
+    }
+
+    nav a{
+        display:block;
+        margin:5px 0;
+    }
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- Header -->
 <header>
     <h1>South India Tourism</h1>
 </header>
 
-<!-- Navigation -->
 <nav>
 <a href="index.html">Home</a>
 <a href="about india.html">About India</a>
@@ -121,11 +133,10 @@ footer{
 <a href="Adventure.html">Adventure</a>
 <a href="reli.html">Religious</a>
 <a href="food and culture.html">Food & Culture</a>
-<a href="gallry.html">Gallery</a>
+<a href="gallery.html">Gallery</a> <!-- FIX: spelling -->
 <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Gallery -->
 <div class="gallery">
 
 <div class="card">
@@ -150,7 +161,6 @@ footer{
 
 </div>
 
-<!-- Festival Section -->
 <div class="festival">
 <h2>Famous Festivals</h2>
 <ul>
@@ -161,7 +171,6 @@ footer{
 </ul>
 </div>
 
-<!-- Footer -->
 <footer>
 <p>© 2026 South India Tourism | All Rights Reserved</p>
 </footer>
